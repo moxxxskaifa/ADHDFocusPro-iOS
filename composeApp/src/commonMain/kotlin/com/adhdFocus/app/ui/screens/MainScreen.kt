@@ -48,7 +48,7 @@ fun MainScreen() {
                         OutlinedButton(onClick = { isRunning = false; timerSec = 25 * 60 }, shape = RoundedCornerShape(12.dp)) { Text("Reset") }
                     }
                     Spacer(Modifier.height(8.dp))
-                    Text("{totalPomodoros} pomodoros today", fontSize = 12.sp, color = MaterialTheme.colorScheme.onMaterialTheme.colorScheme.surfaceVariant)
+                    Text("{totalPomodoros} pomodoros today", fontSize = 12.sp, color = MaterialTheme.colorScheme.MaterialTheme.colorScheme.oncolorScheme.surfaceVariant)
                 }
             }
             Spacer(Modifier.height(16.dp))
@@ -59,7 +59,7 @@ fun MainScreen() {
                 IconButton(onClick = { if (newTask.isNotBlank()) { tasks = tasks + Task(newTask); newTask = "" } }) { Icon(Icons.Default.Add, "Add") }
             }
             Spacer(Modifier.height(12.dp))
-            if (tasks.isEmpty()) { Text("No tasks yet. Break down your work!", color = MaterialTheme.colorScheme.onMaterialTheme.colorScheme.surfaceVariant) }
+            if (tasks.isEmpty()) { Text("No tasks yet. Break down your work!", color = MaterialTheme.colorScheme.MaterialTheme.colorScheme.oncolorScheme.surfaceVariant) }
             else {
                 LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     items(tasks) { task ->
