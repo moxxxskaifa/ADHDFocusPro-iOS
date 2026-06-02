@@ -19,6 +19,7 @@ import kotlinx.coroutines.delay
 data class Task(val name: String, val done: Boolean = false)
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun MainScreen() {
     var tasks by remember { mutableStateOf(listOf<Task>()) }
     var newTask by remember { mutableStateOf("") }
